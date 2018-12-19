@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+
+<fx:root minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" type="TableView" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.172">
+  <columns>
+    <TableColumn prefWidth="75.0" text="Date" />
+    <TableColumn prefWidth="75.0" text="Name" />
+      <TableColumn prefWidth="75.0" text="Age" />
+      <TableColumn prefWidth="75.0" text="Sex" />
+  </columns>
+   <columnResizePolicy>
+      <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+   </columnResizePolicy>
+</fx:root>
