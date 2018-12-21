@@ -18,7 +18,7 @@ import org.koin.standalone.StandAloneContext
  * Purpose: Main application class
  */
 class MainApp : Application(), KoinComponent {
-    private lateinit var stage: Stage
+    private lateinit var mainStage: Stage
 
     // The entry point
     companion object {
@@ -28,21 +28,21 @@ class MainApp : Application(), KoinComponent {
         }
     }
 
-    // Called before stage creation
+    // Called before mainStage creation
     override fun init() {
         super.init()
         StandAloneContext.startKoin(injectionModules)
     }
 
-    // Called after stage creation
+    // Called after mainStage creation
     override fun start(primaryStage: Stage?) {
-        stage = checkNotNull(primaryStage) { "ERROR: null value passed into primaryStage" }
+        mainStage = checkNotNull(primaryStage) { "ERROR: null value passed into primaryStage" }
 
-        val root = FXMLLoader().load<Parent>(
-                javaClass.classLoader.getResourceAsStream("fxml/case-study-view.fxml")
-        )
+        val root: Parent = FXMLLoader(
+                javaClass.classLoader.getResource("fxml/case-study-view.fxml")
+        ).load()
 
-        stage.run {
+        mainStage.run {
             title = "${Values.APP_NAME} - ${Values.APP_VERSION}"
             minWidth = 800.0
             minHeight = 480.0
@@ -54,7 +54,7 @@ class MainApp : Application(), KoinComponent {
     // Called when app stops
     override fun stop() {
         super.stop()
-        stage.close()
+        mainStage.close()
         StandAloneContext.stopKoin()
     }
 }

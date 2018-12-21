@@ -1,6 +1,11 @@
+/**
+ * This file is licensed under the MIT license.
+ * See the LICENSE file in project root for details.
+ */
+
 package io.binayak.util
 
-import io.binayak.model.Case
+import io.binayak.service.SavedCasesService
 import org.koin.dsl.module.module
 
 /**
@@ -8,6 +13,6 @@ import org.koin.dsl.module.module
  */
 object DependencyInjection {
     val injectionModules = listOf( module {
-        factory { Case() }
+        single { SavedCasesService() }
     })
 }
