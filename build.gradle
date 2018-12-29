@@ -10,15 +10,22 @@ repositories {
 
 dependencies {
     // Versions
-    def koinVersion = "1.0.2"
+    def tornadofx_version = "1.7.17"
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     implementation "org.jetbrains.kotlin:kotlin-reflect"
 
-    implementation "org.koin:koin-core:$koinVersion"
-    testImplementation "org.koin:koin-test:$koinVersion"
+    implementation "no.tornado:tornadofx:$tornadofx_version"
 }
 
-mainClassName = "io.binayak.MainApp"
+mainClassName = "io.binayak.LauncherKt"
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
+
+compileKotlin {
+    kotlinOptions.jvmTarget= 1.8
+}
+
+compileTestKotlin {
+    kotlinOptions.jvmTarget= 1.8
+}

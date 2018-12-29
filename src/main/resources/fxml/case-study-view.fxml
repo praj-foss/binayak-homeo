@@ -14,18 +14,18 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="480.0" minWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1" fx:controller="io.binayak.ui.controllers.CaseStudyController">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="480.0" minWidth="800.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.172" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <HBox alignment="CENTER" maxHeight="26.0" minHeight="26.0" prefHeight="26.0" spacing="20.0" VBox.vgrow="NEVER">
+      <HBox alignment="CENTER" maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" spacing="20.0" VBox.vgrow="NEVER">
          <children>
-            <Label text="CASE STUDY">
+            <Label text="Case study">
                <font>
                   <Font name="System Bold" size="18.0" />
                </font>
             </Label>
             <Pane minHeight="20.0" minWidth="200.0" HBox.hgrow="ALWAYS" />
             <Button fx:id="btnOpen" mnemonicParsing="false" onAction="#onOpenAction" prefWidth="80.0" text="Open" />
-            <Button fx:id="btnSave" mnemonicParsing="false" prefWidth="80.0" text="Save" />
+            <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onSaveAction" prefWidth="80.0" text="Save" />
          </children>
       </HBox>
       <HBox alignment="CENTER" maxHeight="26.0" minHeight="26.0" prefHeight="26.0" prefWidth="200.0" spacing="10.0">

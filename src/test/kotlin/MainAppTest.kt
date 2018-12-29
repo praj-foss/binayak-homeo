@@ -1,17 +1,13 @@
-import io.binayak.util.DependencyInjection
 import org.junit.After
 import org.junit.Before
 import org.junit.Test
-import org.koin.standalone.StandAloneContext
-import org.koin.test.KoinTest
 
 /**
  * Purpose: Testing
  */
-class MainAppTest : KoinTest {
+class MainAppTest {
     @Before
     fun before() {
-        StandAloneContext.startKoin(DependencyInjection.injectionModules)
     }
 
     @Test
@@ -21,6 +17,5 @@ class MainAppTest : KoinTest {
 
     @After
     fun after() {
-        StandAloneContext.stopKoin()
     }
 }

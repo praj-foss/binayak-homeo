@@ -6,7 +6,7 @@
 package io.binayak.model
 
 /**
- * Purpose: Enum containing values for 'sex' field
+ * Purpose: Enum containing values for 'sex' field.
  */
 enum class Sex {
     MALE, FEMALE, OTHER

@@ -5,11 +5,23 @@
 
 package io.binayak.model
 
+import javafx.beans.property.SimpleStringProperty
+import tornadofx.*
+
 /**
- * Purpose: Model for observations from a patient
+ * Purpose: Model for observations from a patient.
  */
-data class Observation(
-        val repertory: String,
-        val category: String,
-        val rubric: String
-)
+class Observation(
+        repertory: String,
+        category: String,
+        rubric: String
+) {
+    val repertoryProperty = SimpleStringProperty(repertory)
+    var repertory by repertoryProperty
+
+    val categoryProperty = SimpleStringProperty(category)
+    var category by categoryProperty
+
+    val rubricProperty = SimpleStringProperty(rubric)
+    var rubric by rubricProperty
+}

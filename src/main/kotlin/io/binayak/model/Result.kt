@@ -5,10 +5,20 @@
 
 package io.binayak.model
 
+import javafx.beans.property.SimpleIntegerProperty
+import javafx.beans.property.SimpleStringProperty
+import tornadofx.*
+
 /**
- * Purpose: Model for results corresponding to observations
+ * Purpose: Model for results corresponding to observations.
  */
-data class Result(
-        val medicine: String,
-        val marks: Short
-)
+class Result(
+        medicine: String,
+        marks: Int
+) {
+    val medicineProperty = SimpleStringProperty(medicine)
+    var medicine by medicineProperty
+
+    val marksProperty = SimpleIntegerProperty(marks)
+    var marks by marksProperty
+}
